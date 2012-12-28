@@ -14,7 +14,7 @@
   a  = add -p
   ap = add -p
   s  = status -sb
-  st = status -sb
+  st = status
   ci = commit
   cm = commit -m
   cv = commit -v

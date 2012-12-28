@@ -52,3 +52,4 @@ alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
 alias sea='cd ~/Project/script/groovy/email-alert'
 alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
 alias em='cd /Users/twer/Project/script/groovy/email-alert'
+
