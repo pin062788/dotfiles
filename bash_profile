@@ -17,14 +17,6 @@ function git_branch {
     echo "("${ref#refs/heads/}")"
 }
 
-function get_unpushed
-{
- # ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
- # brinfo=$(git branch -v | grep $(git-branch-name) | awk {'print $4 $5'})
-  #echo "$brinfo"
-  echo ""
-}
-
 function git-branch-name
 {
    echo $(git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
@@ -47,8 +39,7 @@ if [ -f "$HOME/.git-completion.bash" ]; then
    source "$HOME/.git-completion.bash"
 fi
 
-PS1="\[\033[0m\]\h:\[\033[0m\] \[\033[0m\]\w\[\033[0m\] \[\033[1;33m\]\$(git_branch)\[\033[0;31m\]\$(get_unpushed)\[\033[0m\]$ "
-#export PS1="\u@\h : \w \$(parse_git_branch) $ "
+PS1="\[\033[0m\]\u \[\033[0m\]\w\[\033[0m\] \[\033[1;33m\]\$(git_branch)\[\033[0;31m\]\[\033[0m\]$ "
 
 if [ -f "$HOME/.rea_profile" ]; then
   source "$HOME/.rea_profile"
