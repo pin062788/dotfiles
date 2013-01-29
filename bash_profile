@@ -41,6 +41,10 @@ fi
 
 PS1="\[\033[0m\]\u \[\033[0m\]\w\[\033[0m\] \[\033[1;33m\]\$(git_branch)\[\033[0;31m\]\[\033[0m\]$ "
 
+if [ -f "$HOME/.bashrc" ]; then
+   source "$HOME/.bashrc"
+fi
+
 if [ -f "$HOME/.rea_profile" ]; then
   source "$HOME/.rea_profile"
 fi

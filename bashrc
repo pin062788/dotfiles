@@ -41,6 +41,7 @@ alias tjwlog="tail -f $JBOSS_HOME/server/default/log/server.log"
 alias jwlog="cd $JBOSS_HOME/server/default/log/"
 alias jbstart="rm -rf /var/tmp/jetwire/email_alert_index/rea/write.lock;rm -rf /var/tmp/jetwire/email_alert_index/rca/write.lock;$JBOSS_HOME/bin/run.sh -c jetwire"
 alias jbstop="$JBOSS_HOME/bin/shutdown.sh --shutdown"
+alias ws="cd /Users/twer/Work/rea/jetwire-dir/mock-web-service"
 alias jw='cd //Users/twer/Work/tools/jboss-soa-test/jboss-soa-p.4.3.0/jboss-as/server/jetwire/deploy/jetwire'
 
 alias cld='cd ~/work/rea/casa-cloud'
@@ -52,4 +53,5 @@ alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
 alias sea='cd ~/Project/script/groovy/email-alert'
 alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
 alias em='cd /Users/twer/Project/script/groovy/email-alert'
-
+alias jws='cd /Users/twer/Work/rea/casa-jetwire-test-script'
+alias blog='cd /Users/twer/Project/blog/octopress'
