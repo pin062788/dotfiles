@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+require 'open-uri'
+
 def install_vim_plugins {
   git_bundles = [ 
     "git://github.com/astashov/vim-ruby-debugger.git",
@@ -29,6 +32,12 @@ def install_vim_plugins {
     "git@github.com:altercation/vim-colors-solarized.git",
   ]
 
+  bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+  FileUtils.cd(bundles_dir)
+ 
+  puts "trashing everything (lookout!)"
+  Dir["*"].each {|d| FileUtils.rm_rf d }
+
   git_bundles.each do |url|
     dir = url.split('/').last.sub(/\.git$/, '')
     puts "unpacking #{url} into #{dir}"
@@ -53,19 +62,15 @@ def install_scripts {
   end
 }
 
+def install_plugin_log {
+  `mkdir doc`  
+  `find ./ -name "*.txt" -exec cp {} doc \;`
+}
 
-require 'fileutils'
-require 'open-uri'
-
-bundles_dir = File.join(File.dirname(__FILE__), "bundle")
 
 FileUtils.mkdir 'bundle'
 FileUtils.mkdir 'autoload'
 
-FileUtils.cd(bundles_dir)
-
-puts "trashing everything (lookout!)"
-Dir["*"].each {|d| FileUtils.rm_rf d }
-
 install_vim_plugins
 install_scripts
+install_plugin_log
