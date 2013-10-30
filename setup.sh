@@ -10,8 +10,8 @@ mv ~/.bash_profile ~/.bash_profile.bak
 mv ~/.vim ~/.vim.bak
 mv ~/.vimrc ~/.vimrc.bak
 
-ln -s ~/dotfiles/bash/bashrc ~/.bashrc
-ln -s ~/dotfiles/bash/bash_aliases ~/.bash_aliases
-ln -s ~/dotfiles/bash/bash_profile ~/.bash_profile
-ln -s ~/dotfiles/vim/ ~/.vim
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+ln -s ./dotfiles/bash/bashrc ~/.bashrc
+ln -s ./dotfiles/bash/bash_aliases ~/.bash_aliases
+ln -s ./dotfiles/bash/bash_profile ~/.bash_profile
+ln -s ./dotfiles/vim/ ~/.vim
+ln -s ./dotfiles/vim/vimrc ~/.vimrc

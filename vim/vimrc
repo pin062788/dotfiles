@@ -1,129 +1,152 @@
-set history=70000
-
-" Enable filetype plugin
-execute pathogen#infect()
+call pathogen#infect()
 syntax on
 filetype plugin indent on
+runtime macros/matchit.vim
 
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the curors - when moving vertical..
-set so=7
-
-set nu
-
-set wildmenu "Turn on WiLd menu
-
-set ruler "Always show current position
-
-set cmdheight=2 "The commandbar height
-
-set hid "Change buffer - without saving
-
-" Set backspace config
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-set ignorecase "Ignore case when searching
-set smartcase
-
-set hlsearch "Highlight search things
-" set cursorline
-
-set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
-
-set magic "Set magic on, for regular expressions
-
-set showmatch "Show matching bracets when text indicator is over them
-set mat=2 "How many tenths of a second to blink
-
-" No sound on errors
-set noerrorbells
-set novisualbell
+set linebreak"{{{
+set nocompatible
+set history=400
+set ruler
+set number
+set hlsearch
+set incsearch
+set expandtab
 set t_vb=
-set tm=500
+set foldmethod=marker
+set tabstop=4
+set shiftwidth=4    
+set nobackup
+set smarttab
+set smartindent
+set autoindent
+set cindent
+set completeopt=longest,menu"}}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set t_Co=256
-syntax enable 
-set gfn=Monaco:h11
-""'#color jellybeans
+" delete menu bar"{{{
+" transparency
+if has("gui_running")
+    set transparency=10
+endif
+set guioptions-=m
+" delete toolbar
+set guioptions-=T
+" delete right scroller
+set guioptions-=r
+" delete left scroller
+set guioptions-=l"}}}
+"set cursorline
+
+" set guifont=Consolas:h14
+set guifont=Inconsolata\ for\ Powerline:h16
+set encoding=utf-8
+" set guifont=Menlo\ for\ Powerline:h14
+" set guifont=Mensch\ for\ Powerline:h16
+" set guifont=Mensch\ for\ Powerline
+syntax enable
+colorscheme solarized
 
 if has("gui_running")
-  set guioptions-=T
-  color codeschool
-  "set t_Co=256
+    set background=light
+else
+    set background=dark
+endif    
+"colorscheme elflord
+"colorscheme desert
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+      \| exe "normal! g'\"" | endif
 endif
 
-set encoding=utf8
-try
-    lang en_US
-catch
-endtry
+set backspace=indent,eol,start
 
-set ffs=unix,mac,dos "Default file types
+let leader=","
+let mapleader = ","
 
+filetype plugin indent on   " filetype setting
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git anyway...
-set nobackup
-set nowb
-set noswapfile
+" the following function is used for show the status bar on the buttom
+function! CurrectDir()
+    let curdir = substitute(getcwd(), "", "", "g")
+    return curdir
+endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set expandtab
-"set shiftwidth=2
-"set tabstop=4
-"set smarttab
+set statusline=\ [File]\ %F%m%r%h\ %w\ \ [PWD]\ %r%{CurrectDir()}%h\ \ %=[Line]\ %l,%c\ %=\ %P
 
-"set lbr
-"set tw=500
+map <C-N> :!rspec expand("%:p") -cfn -l <C-r>=line('.')<CR>
 
-"set ai "Auto indent
-"set si "Smart indet
+function! RunRSpec(args)
+    let file = expand("%:p")
+    let cmd = ":!rspec " . file . " -cfn " . a:args
+    execute cmd
+endfunction
 
+function! RunRubyScript()
+    let file = expand("%:p")
+    new | setlocal buftype=nofile bufhidden=hide noswapfile | execute ".!ruby " . file
+endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => key mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTreeToggle<CR>
+function! RunPythonScript()
+    let file = expand("%:p")
+    new | setlocal buftype=nofile bufhidden=hide noswapfile | execute ".!python " . file
+endfunction
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+function! NewPost()
+  let title = input("Post Title: ")
+  let file = expand("%:p")
+  new | setlocal buftype=nofile bufhidden=hide noswapfile | execute ".!python ~/develop/post.py -t \"" . shellescape(title) . "\" -f " . file 
+endfunction
 
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+map <F3> :NERDTreeToggle<CR>
+" map <F4> :BuffergatorToggle<CR>
 
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+autocmd BufRead *_spec.rb map <F5> :call RunRSpec("-l " . <C-r>=line('.')<CR>)<CR>
+autocmd BufRead *.dot nmap <F6> :w<CR>:!dot -Tpng -o %<.png % && open %<.png<CR><CR>
+autocmd BufRead *.rb map <F7> :w<CR>:call RunRubyScript()<CR>
+autocmd BufRead *.py map <F8> :w<CR>:call RunPythonScript()<CR>
+autocmd BufRead *.md map <F9> :w<CR>:call NewPost()<CR>
+autocmd BufRead *.js map <F5> :w<CR>:JSHint<CR>
 
+let g:miniBufExplorerMoreThanOne=0"{{{
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1"}}}
 
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
+map <F10> :e $HOME/.vimrc<CR>
+map <C-O> :so $HOME/.vimrc<CR>
+map <C-O> :so $HOME/.gvimrc<CR>
 
-"inoremap ( ()<LEFT>
-"inoremap [ []<LEFT>
-"inoremap { {}<LEFT>
-"inoremap " ""<LEFT>
-"inoremap ' ''<LEFT>
+" " use ,gf to go to file in a vertical split
+nnoremap <silent> ,gf :vertical botright wincmd f<CR>
+
+" switch 1..9 of minibufexpl
+for buffer_no in range(1, 9)
+    execute "nmap <D-" . buffer_no . "> :b" . buffer_no . "<CR>"
+endfor
+
+" swithc 10.20 of minibufexpl
+for buffer_no in range(10, 20)
+    execute "nmap <Leader>" . buffer_no . " :b" . buffer_no . "<CR>"
+endfor
+
+map <C-X> :CtrlPMRU<CR>
+map <C-E> :Ack 
+imap <F2> <C-R>=strftime("%c")<CR>
+nmap <D-c> :let @"=expand("%:p")<CR>
+
+au BufNewFile,BufRead *.gradle setf groovy
+
+set rtp+=/Library/Python/2.7/site-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim
+set laststatus=2
+set noshowmode
+
+let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_user_command = {
+ \ 'types': {
+	 \ 1: ['.git/', 'cd %s && git ls-files'],
+	 \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
+	 \ },
+ \ 'fallback': 'find %s -type f'
+ \ }

@@ -3,41 +3,43 @@ export GATLING_HOME="/Users/twer/Framework/gatling-charts-highcharts-1.5.2"
 export SCALA_HOME="/Users/twer/Framework/scala-2.10.2"
 export FIREFOX_PROFILE="/Users/twer/Work/profile"
 export JAVA_OPTS="-Xmx768M -XX:MaxPermSize=256m -Djava.awt.headless=true -Dfile.encoding=UTF-8"
-#export JAVA_OPTS="$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
-export DEV_TOOLS_HOME=/Users/twer/Work/tools
+export POSTGRE_HOME="/usr/local/Cellar/postgresql/9.2.4"
+#export JAVA_REMOTE_DEBUG_OPTS="$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
+export JAVA_REMOTE_DEBUG_OPTS="-Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
+export APPS_HOME=/Users/twer/Work/apps
 #export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
-export JBOSS_HOME=//Users/twer/Work/tools/jboss-soa-p.4.3.0/jboss-as
-export JBOSS_HOME=//Users/twer/Work/tools/jboss-soa-test/jboss-soa-p.4.3.0/jboss-as
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
+#export JBOSS_HOME=//Users/twer/Work/tools/jboss-soa-p.4.3.0/jboss-as
+export JBOSS_HOME=/Users/twer/Work/apps/jboss-soa-p.4.3.0/jboss-as
 
-export CATALINA_HOME=$DEV_TOOLS_HOME/apache-tomcat-6.0.35
-export PATH=$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin
+export CATALINA_HOME=$APPS_HOME/apache-tomcat-6.0.35
+export PATH="$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin:$POSTGRE_HOME/bin:/Users/twer/Learning/dotfiles/ext/"
 
-#export GRADLE_HOME=$DEV_TOOLS_HOME/gradle-1.0-rc-3
+#export GRADLE_HOME=$APPS_HOME/gradle-1.0-rc-3
 export GRADLE_OPTS='-Xmx512M -XX:MaxPermSize=256M'
 
 export PLAY_HOME=/Users/twer/Work/tools/play-2.0.3
 #export PATH=${GRADLE_HOME}/bin:${PLAY_HOME}:${PATH}
 
 
-#export GROOVY_HOME=$DEV_TOOLS_HOME/groovy-1.8.6/
+#export GROOVY_HOME=$APPS_HOME/groovy-1.8.6/
 #export PATH=${GROOVY_HOME}/bin:${PATH}
 
-#export GRAILS_HOME=$DEV_TOOLS_HOME/grails-2.1.0/
-#export GRAILS_HOME=$DEV_TOOLS_HOME/grails-2.0.4/
+#export GRAILS_HOME=$APPS_HOME/grails-2.1.0/
+#export GRAILS_HOME=$APPS_HOME/grails-2.0.4/
 #export PATH=${GRAILS_HOME}/bin:${PATH}
 
 
-#export GRIFFON_HOME=$DEV_TOOLS_HOME/griffon-1.1.0
+#export GRIFFON_HOME=$APPS_HOME/griffon-1.1.0
 #export PATH=${GRIFFON_HOME}/bin:${PATH}
-export CXF_HOME=$DEV_TOOLS_HOME/apache-cxf-2.6.0/
+export CXF_HOME=$APPS_HOME/apache-cxf-2.6.0/
 export PATH=${CXF_HOME}/bin:${PATH}
 
 export FEEDER_HOME=/Users/twer/Work/feeder-casa
 export PATH=${FEEDER_HOME}/bin:${PATH}
 
-export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin
+export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin
 
 alias tc='cd ${CATALINA_HOME}'
 alias tcc='rm -rf ${CATALINA_HOME}/webapps/*DS*'
@@ -52,9 +54,11 @@ alias jwlog="cd $JBOSS_HOME/server/default/log/"
 alias jbstart="rm -rf /var/tmp/jetwire/email_alert_index/rea/write.lock;rm -rf /var/tmp/jetwire/email_alert_index/rca/write.lock;$JBOSS_HOME/bin/run.sh -c jetwire"
 alias jbstop="$JBOSS_HOME/bin/shutdown.sh --shutdown"
 alias ws="cd /Users/twer/Work/rea/jetwire-dir/mock-web-service"
-alias jw='cd //Users/twer/Work/tools/jboss-soa-test/jboss-soa-p.4.3.0/jboss-as/server/jetwire/deploy/jetwire'
+alias jw="cd $JBOSS_HOME/server/jetwire/deploy/jetwire"
 
-alias cld='cd ~/work/rea/casa-cloud'
+export REA_HOME="/Users/twer/Work/rea"
+alias cld="cd $REA_HOME/casa/casa-cloud"
+alias ds="cd $REA_HOME/casa/consumer-search"
 alias hd='heroku create --stack cedar'
 alias findMatchFile='find . -name "*.log" -exec grep -n -H ".*jetwire.*" {} \;'
 alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications'
@@ -64,5 +68,12 @@ alias sea='cd ~/Project/script/groovy/email-alert'
 alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
 alias em='cd /Users/twer/Project/script/groovy/email-alert'
 alias jws='cd /Users/twer/Work/rea/casa-jetwire-test-script'
-alias blog='cd /Users/twer/Project/blog/octopress'
 
+alias twu='cd /Users/twer/Downloads/TWU'
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/twer/.gvm/bin/gvm-init.sh" ]] && source "/Users/twer/.gvm/bin/gvm-init.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

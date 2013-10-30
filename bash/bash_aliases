@@ -1,9 +1,12 @@
+alias startps='pg_ctl -D /usr/local/var/postgres/data -l /tmp/postgre_server.log start'
+alias stopps='pg_ctl -D /usr/local/var/postgres/data stop -s -m fast'
 alias ead="source /Users/twer/myhome/enableDebug.sh"
 alias dad="source /Users/twer/myhome/disableDebug.sh"
 alias yyproxy="ssh -N -f -D 1080 twer@173.255.208.86"
 alias pxy="ssh -qTfnN -D 1090 root@198.74.48.54"
-
+alias blog='cd /Users/twer/Downloads/Personal/blog'
 alias dir="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+alias mou='open -a Mou'
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias la='ls -AFG'
@@ -13,7 +16,6 @@ alias rm='rm -i' # DON'T USE rm -rf ALWAYS, BE CAREFUL
 alias rdf='rm -rf'
 
 alias gd='cd ~/Downloads'
-alias ds='cd /Users/twer/Work/rea/consumer-search'
 
 alias hi=' history | less +G'
 
@@ -46,13 +48,15 @@ alias resource='source ~/.bashrc'
 alias wtf='tail -f /var/log/{dmesg,messages,*{,/*}{log,err}}'
 
 #alias gradle='gradle -q'
-alias itpub='cd /Users/twer/Test/download_itpub'
-alias ted='cd /Users/twer/Downloads/english/ted/ruby'
+alias itpub='cd /Users/twer/Downloads/Learning/Git/script/ruby/download_itpub'
+alias ted='cd /Users/twer/Downloads/Learning/Git/script/ruby/download_ted'
 alias dens='cd /Users/twer/Project/rails/awsdens'
 alias hi='cd /Users/twer/Work/rea/casa/home-ideas'
-alias jwtest='cd /Users/twer/Work/rea/casa-jetwire-test-script'
+alias jwtest='cd /Users/twer/Work/rea/casa/casa-jetwire-test-script'
 alias casa-api='cd /Users/twer/Work/rea/syndication/casa-api'
 alias rapi='API_DOMAIN=casa RAILS_ENV=development rails s'
 alias listingxml='cd /web/app/jetwire/dataloader-data/casa/incoming/jetwire-xml'
 alias jwdev='cd /Users/twer/Work/rea/jetwire-casa/jetwire-casa-master/'
 alias hackday='cd /Users/twer/Work/rea/hackday/'
+alias rea='cd ~/Work/rea'
+alias vm='cd ~/Work/vm'
