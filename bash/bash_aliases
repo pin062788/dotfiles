@@ -12,6 +12,7 @@ alias ll='ls -lFG'
 alias la='ls -AFG'
 alias l='ls -hlFG'
 
+alias dotfiles='cd /Users/twer/Learning/dotfiles/'
 alias rm='rm -i' # DON'T USE rm -rf ALWAYS, BE CAREFUL
 alias rdf='rm -rf'
 
