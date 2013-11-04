@@ -3,7 +3,7 @@
 require 'fileutils'
 require 'open-uri'
 
-def install_vim_plugins {
+def install_vim_plugins 
   git_bundles = [ 
     "git://github.com/astashov/vim-ruby-debugger.git",
     "git://github.com/ervandew/supertab.git",
@@ -44,10 +44,10 @@ def install_vim_plugins {
     `git clone #{url} #{dir}`
     FileUtils.rm_rf(File.join(dir, ".git"))
   end
-}
+end
 
 
-def install_scripts {
+def install_scripts 
   vim_org_scripts = [
     ["IndexedSearch", "7062",  "plugin"],
     ["jquery",        "12107", "syntax"],
@@ -60,16 +60,16 @@ def install_scripts {
       file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
     end
   end
-}
+end
 
-def install_plugin_log {
+def install_plugin_log 
   `mkdir doc`  
   `find ./ -name "*.txt" -exec cp {} doc \;`
-}
+end
 
 
-FileUtils.mkdir 'bundle'
-FileUtils.mkdir 'autoload'
+#FileUtils.mkdir 'bundle'
+#FileUtils.mkdir 'autoload'
 
 install_vim_plugins
 install_scripts
