@@ -7,6 +7,7 @@ ln_it_to_home()
 
     if [ -e "$HOME/${target_file}" ]; then
         cp -rf "$HOME/${target_file}" "$HOME/${target_file}.bak"
+        rm -rf "$HOME/${target_file}"
     fi  
 
     ln -sf -n -v `pwd -P`/"$source_file" $HOME/"$target_file"
