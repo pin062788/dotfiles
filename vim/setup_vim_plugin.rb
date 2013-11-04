@@ -29,7 +29,7 @@ def install_vim_plugins
     "git://github.com/tsaleh/vim-tmux.git",
     "git://github.com/vim-ruby/vim-ruby.git",
     "git://github.com/vim-scripts/Gist.vim.git",
-    "git@github.com:altercation/vim-colors-solarized.git",
+    "git://github.com/altercation/vim-colors-solarized.git",
   ]
 
   bundles_dir = File.join(File.dirname(__FILE__), "bundle")
