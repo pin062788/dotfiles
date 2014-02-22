@@ -64,7 +64,7 @@ end
 
 def install_plugin_log 
   `mkdir doc`  
-  `find ./ -name "*.txt" -exec cp {} doc \;`
+  `find ./* -name "*.txt" -exec cp {} doc \;`
 end
 
 

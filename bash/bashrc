@@ -4,42 +4,31 @@ export SCALA_HOME="/Users/twer/Framework/scala-2.10.2"
 export FIREFOX_PROFILE="/Users/twer/Work/profile"
 export JAVA_OPTS="-Xmx768M -XX:MaxPermSize=256m -Djava.awt.headless=true -Dfile.encoding=UTF-8"
 export POSTGRE_HOME="/usr/local/Cellar/postgresql/9.2.4"
-#export JAVA_REMOTE_DEBUG_OPTS="$JAVA_OPTS -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
 export JAVA_REMOTE_DEBUG_OPTS="-Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
 export APPS_HOME=/Users/twer/Work/apps
 #export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
 #export JBOSS_HOME=//Users/twer/Work/tools/jboss-soa-p.4.3.0/jboss-as
 export JBOSS_HOME=/Users/twer/Work/apps/jboss-soa-p.4.3.0/jboss-as
+export ACTIVEMQ_HOME=/Users/twer/Work/apps/activemq
 
 export CATALINA_HOME=$APPS_HOME/apache-tomcat-6.0.35
 export PATH="$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin:$POSTGRE_HOME/bin:/Users/twer/Learning/dotfiles/ext/"
 
-#export GRADLE_HOME=$APPS_HOME/gradle-1.0-rc-3
 export GRADLE_OPTS='-Xmx512M -XX:MaxPermSize=256M'
 
 export PLAY_HOME=/Users/twer/Work/tools/play-2.0.3
-#export PATH=${GRADLE_HOME}/bin:${PLAY_HOME}:${PATH}
 
 
-#export GROOVY_HOME=$APPS_HOME/groovy-1.8.6/
-#export PATH=${GROOVY_HOME}/bin:${PATH}
-
-#export GRAILS_HOME=$APPS_HOME/grails-2.1.0/
-#export GRAILS_HOME=$APPS_HOME/grails-2.0.4/
-#export PATH=${GRAILS_HOME}/bin:${PATH}
-
-
-#export GRIFFON_HOME=$APPS_HOME/griffon-1.1.0
-#export PATH=${GRIFFON_HOME}/bin:${PATH}
 export CXF_HOME=$APPS_HOME/apache-cxf-2.6.0/
 export PATH=${CXF_HOME}/bin:${PATH}
 
-export FEEDER_HOME=/Users/twer/Work/feeder-casa
+export FEEDER_HOME=/opt/rea/apps/lmds/feeder-casa-155.178
 export PATH=${FEEDER_HOME}/bin:${PATH}
 
 export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 alias tc='cd ${CATALINA_HOME}'
 alias tcc='rm -rf ${CATALINA_HOME}/webapps/*DS*'
