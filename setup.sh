@@ -20,6 +20,7 @@ set -x
 ln_it_to_home "bash/bashrc" ".bashrc"
 ln_it_to_home "bash/bash_profile" ".bash_profile"
 ln_it_to_home "bash/bash_aliases" ".bash_aliases"
+ln_it_to_home "bash/zshrc" ".zshrc"
 
 ln_it_to_home "vim" ".vim"
 ln_it_to_home "vim/vimrc" ".vimrc"
