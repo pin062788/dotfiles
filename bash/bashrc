@@ -26,7 +26,7 @@ export PATH=${CXF_HOME}/bin:${PATH}
 export FEEDER_HOME=/opt/rea/apps/lmds/feeder-casa-155.178
 export PATH=${FEEDER_HOME}/bin:${PATH}
 
-export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin
+export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin:/Users/twer/.aws
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
