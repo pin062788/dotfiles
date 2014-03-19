@@ -69,3 +69,5 @@ alias loaddata='/opt/rea/apps/lmds/feeder/bin/dataloader.sh -t listing -c rea'
 alias lbs='cd /Users/twer/Work/projects/lbs'
 alias e2e='cd /Users/twer/Work/rea/casa/end-2-end'
 alias china='cd /Users/twer/Work/rea/china'
+alias solr-stg='ssh -A -i ~/.aws/guojifang-stg-ap-northeast-1.pem -L 8983:solr:8983 ec2-user@54.238.198.167 -N'
+source ~/.bash_colors
