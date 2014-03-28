@@ -60,6 +60,6 @@ export LC_ALL=en_US.UTF-8
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s /Users/twer/.nvm/nvm.sh ]] && . /Users/twer/.nvm/nvm.sh # This loads NVM
+[[ -s /Users/leiwang/.nvm/nvm.sh ]] && . /Users/leiwang/.nvm/nvm.sh # This loads NVM
 
-export REBEL_HOME=/Users/twer/Downloads/jrebel
+export REBEL_HOME=/Users/leiwang/Downloads/jrebel

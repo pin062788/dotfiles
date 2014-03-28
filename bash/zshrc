@@ -45,12 +45,22 @@ plugins=(git node brew bundle cap gem github osx rails ruby rvm svn textmate)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH::/Users/twer/.rvm/bin:/usr/local/heroku/bin:/Users/twer/.gvm/vertx/current/bin:/Users/twer/.gvm/springboot/current/bin:/Users/twer/.gvm/lazybones/current/bin:/Users/twer/.gvm/groovyserv/current/bin:/Users/twer/.gvm/groovy/current/bin:/Users/twer/.gvm/griffon/current/bin:/Users/twer/.gvm/grails/current/bin:/Users/twer/.gvm/gradle/current/bin:/Users/twer/.gvm/gaiden/current/bin:/Users/twer/myhome/:/Users/twer/Work/feeder-casa/bin:/Users/twer/Work/apps/apache-cxf-2.6.0/bin:/usr/local/sbin:/usr/local/bin:/Users/twer/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/twer/Work/apps/apache-tomcat-6.0.35/bin:/Users/twer/Framework/scala-2.10.2/bin:/usr/local/Cellar/postgresql/9.2.4/bin:/Users/twer/Learning/dotfiles/ext/:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin
+export PATH=$PATH::/Users/leiwang/.rvm/bin:/usr/local/heroku/bin:/Users/leiwang/.gvm/vertx/current/bin:/Users/leiwang/.gvm/springboot/current/bin:/Users/leiwang/.gvm/lazybones/current/bin:/Users/leiwang/.gvm/groovyserv/current/bin:/Users/leiwang/.gvm/groovy/current/bin:/Users/leiwang/.gvm/griffon/current/bin:/Users/leiwang/.gvm/grails/current/bin:/Users/leiwang/.gvm/gradle/current/bin:/Users/leiwang/.gvm/gaiden/current/bin:/Users/leiwang/myhome/:/Users/leiwang/Work/feeder-casa/bin:/Users/leiwang/Work/apps/apache-cxf-2.6.0/bin:/usr/local/sbin:/usr/local/bin:/Users/leiwang/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/leiwang/Work/apps/apache-tomcat-6.0.35/bin:/Users/leiwang/Framework/scala-2.10.2/bin:/usr/local/Cellar/postgresql/9.2.4/bin:/Users/leiwang/Learning/dotfiles/ext/:/Users/leiwang/Work/bin:/Users/leiwang/Work/dotfiles/bin
 
 source ~/.bash_profile
 #source ~/.bash_aliases
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin
 
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 source "$HOME/.gvm/bin/gvm-init.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

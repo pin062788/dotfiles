@@ -1,11 +1,9 @@
+alias it='cd /Users/leiwang/Learning/projects/it/'
 alias startps='pg_ctl -D /usr/local/var/postgres/data -l /tmp/postgre_server.log start'
 alias stopps='pg_ctl -D /usr/local/var/postgres/data stop -s -m fast'
-alias ead="source /Users/twer/myhome/enableDebug.sh"
-alias dad="source /Users/twer/myhome/disableDebug.sh"
-alias yyproxy="ssh -N -f -D 1080 twer@173.255.208.86"
+alias yyproxy="ssh -N -f -D 1080 leiwang@173.255.208.86"
 alias pxy="ssh -qTfnN -D 1090 root@198.74.48.54"
-alias blog='cd /Users/twer/Downloads/Personal/blog'
-alias linode='ssh root@198.74.48.54'
+alias blog='cd /Users/leiwang/Downloads/Personal/blog'
 alias dir="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias mou='open -a Mou'
 alias ls='ls -FG'
@@ -13,7 +11,7 @@ alias ll='ls -lFG'
 alias la='ls -AFG'
 alias l='ls -hlFG'
 
-alias dotfiles='cd /Users/twer/Learning/dotfiles/'
+alias dotfiles='cd /Users/leiwang/Work/dotfiles/'
 alias rm='rm -i' # DON'T USE rm -rf ALWAYS, BE CAREFUL
 alias rdf='rm -rf'
 
@@ -50,24 +48,27 @@ alias resource='source ~/.bashrc'
 alias wtf='tail -f /var/log/{dmesg,messages,*{,/*}{log,err}}'
 
 #alias gradle='gradle -q'
-alias itpub='cd /Users/twer/Downloads/Learning/Git/script/ruby/download_itpub'
-alias ted='cd /Users/twer/Downloads/Learning/Git/script/ruby/download_ted'
-alias dens='cd /Users/twer/Project/rails/awsdens'
-alias hi='cd /Users/twer/Work/rea/casa/home-ideas'
-alias jwtest='cd /Users/twer/Work/rea/casa/casa-jetwire-test-script'
-alias casa-api='cd /Users/twer/Work/rea/syndication/casa-api'
+alias itpub='cd /Users/leiwang/Downloads/Learning/Books/download_itpub' 
+alias ted='cd /Users/leiwang/Downloads/Learning/Git/script/ruby/download_ted'
+alias dens='cd /Users/leiwang/Project/rails/awsdens'
+alias hi='cd /Users/leiwang/Work/rea/casa/home-ideas'
+alias jwtest='cd /Users/leiwang/Work/rea/casa/casa-jetwire-test-script'
+alias casa-api='cd /Users/leiwang/Work/rea/syndication/casa-api'
 alias rapi='API_DOMAIN=casa RAILS_ENV=development rails s'
 alias listingxml='cd /web/app/jetwire/dataloader-data/casa/incoming/jetwire-xml'
-alias jwdev='cd /Users/twer/Work/rea/jetwire-casa/jetwire-casa-master/'
-alias hackday='cd /Users/twer/Work/rea/hackday/'
+alias jwdev='cd /Users/leiwang/Work/rea/jetwire-casa/jetwire-casa-master/'
+alias hackday='cd /Users/leiwang/Work/rea/hackday/'
 alias rea='cd ~/Work/rea'
 alias vm='cd ~/Work/vm'
 alias webserver='cd /Library/WebServer/Documents'
-alias goagent='cd /Users/twer/Downloads/goagent/local/ && python proxy.py'
+alias goagent='cd /Users/leiwang/Apps/goagent/local && python proxy.py'
 alias redis='redis-server /usr/local/etc/redis.conf'
 alias loaddata='/opt/rea/apps/lmds/feeder/bin/dataloader.sh -t listing -c rea'
-alias lbs='cd /Users/twer/Work/projects/lbs'
-alias e2e='cd /Users/twer/Work/rea/casa/end-2-end'
-alias china='cd /Users/twer/Work/rea/china'
 alias solr-stg='ssh -A -i ~/.aws/guojifang-stg-ap-northeast-1.pem -L 8983:solr:8983 ec2-user@54.238.198.167 -N'
 source ~/.bash_colors
+
+alias e2e='cd /Users/leiwang/Work/rea/casa/end-2-end'
+alias china='cd /Users/leiwang/Work/rea/china'
+alias resi='cd /Users/leiwang/Work/rea/resi'
+alias linode='ssh -qTfnN -D 7070 root@176.58.114.68'
+alias cp='cd /Users/leiwang/Work/rea/cp'

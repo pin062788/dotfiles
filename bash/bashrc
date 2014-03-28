@@ -1,23 +1,23 @@
 #echo "~/.bashrc"
-export GATLING_HOME="/Users/twer/Framework/gatling-charts-highcharts-1.5.2"
-export SCALA_HOME="/Users/twer/Framework/scala-2.10.2"
-export FIREFOX_PROFILE="/Users/twer/Work/profile"
+export GATLING_HOME="/Users/leiwang/Framework/gatling-charts-highcharts-1.5.2"
+export SCALA_HOME="/Users/leiwang/Framework/scala-2.10.2"
+export FIREFOX_PROFILE="/Users/leiwang/Work/profile"
 export JAVA_OPTS="-Xmx768M -XX:MaxPermSize=256m -Djava.awt.headless=true -Dfile.encoding=UTF-8"
 export POSTGRE_HOME="/usr/local/Cellar/postgresql/9.2.4"
 export JAVA_REMOTE_DEBUG_OPTS="-Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
-export APPS_HOME=/Users/twer/Work/apps
+export APPS_HOME=/Users/leiwang/Work/apps
 #export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
-#export JBOSS_HOME=//Users/twer/Work/tools/jboss-soa-p.4.3.0/jboss-as
-export JBOSS_HOME=/Users/twer/Work/apps/jboss-soa-p.4.3.0/jboss-as
-export ACTIVEMQ_HOME=/Users/twer/Work/apps/activemq
+#export JBOSS_HOME=//Users/leiwang/Work/tools/jboss-soa-p.4.3.0/jboss-as
+export JBOSS_HOME=/Users/leiwang/Work/apps/jboss-soa-p.4.3.0/jboss-as
+export ACTIVEMQ_HOME=/Users/leiwang/Work/apps/activemq
 
 export CATALINA_HOME=$APPS_HOME/apache-tomcat-6.0.35
-export PATH="$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin:$POSTGRE_HOME/bin:/Users/twer/Learning/dotfiles/ext/"
+export PATH="$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin:$POSTGRE_HOME/bin:/Users/leiwang/Learning/dotfiles/ext/"
 
 export GRADLE_OPTS='-Xmx512M -XX:MaxPermSize=256M'
 
-export PLAY_HOME=/Users/twer/Work/tools/play-2.0.3
+export PLAY_HOME=/Users/leiwang/Work/tools/play-2.0.3
 
 
 export CXF_HOME=$APPS_HOME/apache-cxf-2.6.0/
@@ -26,7 +26,7 @@ export PATH=${CXF_HOME}/bin:${PATH}
 export FEEDER_HOME=/opt/rea/apps/lmds/feeder-casa-155.178
 export PATH=${FEEDER_HOME}/bin:${PATH}
 
-export PATH=/Users/twer/myhome/:${PATH}:/Users/twer/Work/bin:/Users/twer/Learning/dotfiles/bin:/Users/twer/.aws
+export PATH=/Users/leiwang/myhome/:${PATH}:/Users/leiwang/Work/bin:/Users/leiwang/Learning/dotfiles/bin:/Users/leiwang/.aws
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
@@ -42,27 +42,27 @@ alias tjwlog="tail -f $JBOSS_HOME/server/default/log/server.log"
 alias jwlog="cd $JBOSS_HOME/server/default/log/"
 alias jbstart="rm -rf /var/tmp/jetwire/email_alert_index/rea/write.lock;rm -rf /var/tmp/jetwire/email_alert_index/rca/write.lock;$JBOSS_HOME/bin/run.sh -c jetwire"
 alias jbstop="$JBOSS_HOME/bin/shutdown.sh --shutdown"
-alias ws="cd /Users/twer/Work/rea/jetwire-dir/mock-web-service"
+alias ws="cd /Users/leiwang/Work/rea/jetwire-dir/mock-web-service"
 alias jw="cd $JBOSS_HOME/server/jetwire/deploy/jetwire"
 
-export REA_HOME="/Users/twer/Work/rea"
+export REA_HOME="/Users/leiwang/Work/rea"
 alias cld="cd $REA_HOME/casa/casa-cloud"
 alias ds="cd $REA_HOME/casa/consumer-search"
 alias hd='heroku create --stack cedar'
 alias findMatchFile='find . -name "*.log" -exec grep -n -H ".*jetwire.*" {} \;'
 alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications'
 alias gitserver='git daemon --export-all --base-path=.'
-alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
+alias fast='cd /Users/leiwang/VirtualBox\ VMs/fast'
 alias sea='cd ~/Project/script/groovy/email-alert'
-alias fast='cd /Users/twer/VirtualBox\ VMs/fast'
-alias em='cd /Users/twer/Project/script/groovy/email-alert'
-alias jws='cd /Users/twer/Work/rea/casa-jetwire-test-script'
+alias fast='cd /Users/leiwang/VirtualBox\ VMs/fast'
+alias em='cd /Users/leiwang/Project/script/groovy/email-alert'
+alias jws='cd /Users/leiwang/Work/rea/casa-jetwire-test-script'
 
-alias twu='cd /Users/twer/Downloads/TWU'
+alias twu='cd /Users/leiwang/Downloads/TWU'
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/twer/.gvm/bin/gvm-init.sh" ]] && source "/Users/twer/.gvm/bin/gvm-init.sh"
+[[ -s "/Users/leiwang/.gvm/bin/gvm-init.sh" ]] && source "/Users/leiwang/.gvm/bin/gvm-init.sh"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
