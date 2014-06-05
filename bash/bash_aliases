@@ -1,9 +1,9 @@
 alias it='cd /Users/leiwang/Learning/projects/it/'
 alias startps='pg_ctl -D /usr/local/var/postgres/data -l /tmp/postgre_server.log start'
 alias stopps='pg_ctl -D /usr/local/var/postgres/data stop -s -m fast'
-alias yyproxy="ssh -N -f -D 1080 leiwang@173.255.208.86"
+alias yyproxy="ssh -N -f -D 1080 root@106.186.117.131"
 alias pxy="ssh -qTfnN -D 1090 root@198.74.48.54"
-alias blog='cd /Users/leiwang/Downloads/Personal/blog'
+alias blog='cd /Users/leiwang/Learning/wldandan.github.com' 
 alias dir="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias mou='open -a Mou'
 alias ls='ls -FG'
@@ -65,10 +65,13 @@ alias goagent='cd /Users/leiwang/Apps/goagent/local && python proxy.py'
 alias redis='redis-server /usr/local/etc/redis.conf'
 alias loaddata='/opt/rea/apps/lmds/feeder/bin/dataloader.sh -t listing -c rea'
 alias solr-stg='ssh -A -i ~/.aws/guojifang-stg-ap-northeast-1.pem -L 8983:solr:8983 ec2-user@54.238.198.167 -N'
-source ~/.bash_colors
 
 alias e2e='cd /Users/leiwang/Work/rea/casa/end-2-end'
 alias china='cd /Users/leiwang/Work/rea/china'
 alias resi='cd /Users/leiwang/Work/rea/resi'
 alias linode='ssh -qTfnN -D 7070 root@176.58.114.68'
-alias cp='cd /Users/leiwang/Work/rea/cp'
+alias rea='cd /Users/leiwang/Work/rea'
+alias feccc='cd /Users/leiwang/Learning/projects/feccc/jd'
+alias spikes='cd ~/Learning/spikes'
+alias biz='cd /Users/leiwang/Work/rea/biz'
+alias jdkhome='cd /Library/Java/JavaVirtualMachines'
