@@ -75,3 +75,9 @@ alias feccc='cd /Users/leiwang/Learning/projects/feccc/jd'
 alias spikes='cd ~/Learning/spikes'
 alias biz='cd /Users/leiwang/Work/rea/biz'
 alias jdkhome='cd /Library/Java/JavaVirtualMachines'
+
+
+alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+
