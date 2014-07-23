@@ -12,7 +12,7 @@ export APPS_HOME=/Users/leiwang/Work/apps
 export JBOSS_HOME=/Users/leiwang/Work/apps/jboss-soa-p.4.3.0/jboss-as
 export ACTIVEMQ_HOME=/Users/leiwang/Work/apps/activemq
 
-export CATALINA_HOME=$APPS_HOME/apache-tomcat-6.0.35
+export CATALINA_HOME=$APPS_HOME/apache-tomcat-7.0.54
 export PATH="$PATH:$HOME/.rvm/bin:$CATALINA_HOME/bin:$SCALA_HOME/bin:$POSTGRE_HOME/bin:/Users/leiwang/Learning/dotfiles/ext/"
 
 export GRADLE_OPTS='-Xmx512M -XX:MaxPermSize=256M'
