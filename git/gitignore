@@ -10,3 +10,4 @@ scotts_tools/
 
 .gitconfig
 .gitmodules
+.idea/

@@ -73,6 +73,8 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export PATH="/Users/leiwang/Learning/spikes/ruby/downloader/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH="/Users/leiwang/Learning/projects/go"
