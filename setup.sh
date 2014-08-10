@@ -30,5 +30,6 @@ ln_it_to_home "git/gitconfig" ".gitconfig"
 ln_it_to_home "git/gitignore" ".gitignore"
 ln_it_to_home "git/git-completion.bash" "git-completion.bash"
 ln_it_to_home "git/githelpers" ".githelpers"
+ln_it_to_home "git/hooks" ".git/hooks"
 
 ln_it_to_home "mongo/mongrc.js" ".mongorc.js"

@@ -258,3 +258,5 @@
   lineNumber = true
 [push]
   default = current
+[init]
+	templatedir = ~/.git
