@@ -78,3 +78,4 @@ fi
 
 export AWS_CLI=/usr/local/bin/aws
 source /Users/leiwang/Work/rea/biz/saml-aws-functions/bash-functions
+eval $(ssh-agent)
