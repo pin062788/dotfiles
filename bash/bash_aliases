@@ -82,3 +82,4 @@ alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 alias mysqlstart='mysql.server start'
+alias kmd='ssh apache@106.186.117.131'
