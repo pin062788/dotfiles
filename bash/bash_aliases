@@ -83,3 +83,8 @@ alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 alias mysqlstart='mysql.server start'
 alias kmd='ssh apache@106.186.117.131'
+alias ali='ssh apache@114.215.126.91'
+alias asgard_pro='ssh -L 8080:asgard.corp.realestate.com.au:80 biq-deploy@deploy.corp.realestate.com.au'
+alias psstart='pg_ctl -D /usr/local/var/postgres/data -l logfile start'
+alias kmdb='ssh -L:3307:106.186.117.131:3306 apache@106.186.117.131'
+alias km='cd /Users/leiwang/Learning/spikes/kidsmeet'
