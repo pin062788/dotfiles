@@ -1,0 +1,2 @@
+$(boot2docker shellinit)
+export DOCKER_HOST=tcp://127.0.0.1:2376

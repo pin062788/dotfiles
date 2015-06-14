@@ -39,12 +39,12 @@
   dif = diff
   oneline = log --pretty=oneline --since='2 days ago' --abbrev-commit
   onelog = log -p -1 --abbrev-commit
-  #l    = log --graph --oneline --abbrev-commit --decorate --all
+  l    = log --graph --oneline --abbrev-commit --decorate --all
   
   # custom log that is a copy of Gary Bernhardt's
   l  = "!source ~/.githelpers && pretty_git_log"
   aa = add --all
-  glog = log --graph --oneline --abbrev-commit --decorate --all --pretty='%Cgreen%h%Creset %Cred%cr%Creset %s %Cgreen<%aN>%Creset'
+  gl = log --graph --oneline --abbrev-commit --decorate --all --pretty='%Cgreen%h%Creset %Cred%cr%Creset %s %Cgreen<%aN>%Creset'
   unstage = reset HEAD --
   last = log -1 HEAD
   g = grep --break --heading --line-number
@@ -85,15 +85,15 @@
 
 
   c    = config -l
-    s    = status -sb
-    l    = log --pretty=oneline --abbrev-commit --abbrev=4 --decorate -25
-    ll   = log --pretty=oneline --abbrev-commit --abbrev=4 --decorate
-    g    = log --pretty=oneline --abbrev-commit --abbrev=4 -25 --graph --decorate
-    gg   = log --pretty=oneline --abbrev-commit --abbrev=4 --graph --decorate
-    rp   = rev-parse --short=4
-    b    = branch
-    ss   = !git snapshot
-    save = !git snapshot
+  s    = status -sb
+  l    = log --pretty=oneline --abbrev-commit --abbrev=4 --decorate -25
+  ll   = log --pretty=oneline --abbrev-commit --abbrev=4 --decorate
+  g    = log --pretty=oneline --abbrev-commit --abbrev=4 -25 --graph --decorate
+  gg   = log --pretty=oneline --abbrev-commit --abbrev=4 --graph --decorate
+  rp   = rev-parse --short=4
+  b    = branch
+  ss   = !git snapshot
+  save = !git snapshot
 
 
 # General purpose aliases:

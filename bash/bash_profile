@@ -74,7 +74,7 @@ if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
     eval `$SSHAGENT $SSHAGENTARGS`
     trap "kill $SSH_AGENT_PID" 0
 fi
-. ~/.gvm/springboot/current/shell-completion/bash/spring
+#. ~/.gvm/springboot/current/shell-completion/bash/spring
 
 export AWS_CLI=/usr/local/bin/aws
 source /Users/leiwang/Work/rea/biz/saml-aws-functions/bash-functions
