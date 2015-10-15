@@ -68,14 +68,14 @@ export LC_ALL=en_US.UTF-8
 
 export REBEL_HOME=/Users/leiwang/Downloads/jrebel
 
-SSHAGENT=`which ssh-agent`
-SSHAGENTARGS="-s"
-if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-    eval `$SSHAGENT $SSHAGENTARGS`
-    trap "kill $SSH_AGENT_PID" 0
-fi
+#SSHAGENT=`which ssh-agent`
+#SSHAGENTARGS="-s"
+#if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+#    eval `$SSHAGENT $SSHAGENTARGS`
+#    trap "kill $SSH_AGENT_PID" 0
+#fi
 #. ~/.gvm/springboot/current/shell-completion/bash/spring
 
 export AWS_CLI=/usr/local/bin/aws
 source /Users/leiwang/Work/rea/biz/saml-aws-functions/bash-functions
-eval $(ssh-agent)
+#eval $(ssh-agent)

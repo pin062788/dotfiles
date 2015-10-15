@@ -81,4 +81,3 @@ export GOPATH="/Users/leiwang/Learning/projects/go"
 export GOBIN=$GOPATH/bin
 export PATH="$GOBIN:$PATH"
 export PATH=$PATH:/usr/local/share/npm/bin
-#source /Users/leiwang/Work/rea/biz/saml-aws-functions/zsh-functions
